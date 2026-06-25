@@ -53,7 +53,7 @@ nav ul li a:hover {
 /* HERO */
 .hero {
     height: 100vh;
-    background-image: url('../imagens/hero.jpg');
+    background-image: url('hero.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
