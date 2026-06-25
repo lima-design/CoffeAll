@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CoffeAll</title>
+    <link rel="stylesheet" href="css/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet"></head>
+<body class="cardapio-page">
+
+    <header>
+    <nav>
+        <div class="logo"><a href="index.html">CoffeAll</a></div>
+        <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="cardapio.html">Cardápio</a></li>
+            <li><a href="contacto.html">Fale Connosco</a></li>
+        </ul>
+    </nav>
+</header>
+
+<style>
+  .preview-wrap {
+    font-family: Georgia, serif;
+    background: #f5f0e0;
+    padding: 0 0 2rem;
+  }
+
+  .prev-hero {
+    background: #4a5c3a;
+    padding: 5rem 2rem 4rem;
+    text-align: center;
+    border-top: 4px solid #f5f0e8;
+  }
+
+  .prev-hero h1 {
+    font-size: 2rem;
+    color: #f5f0e8;
+    margin: 0 0 0.6rem;
+    letter-spacing: 0.05em;
+    font-weight: 600;
+  }
+
+  .prev-hero p {
+    color: #c8d4b8;
+    font-size: 0.9rem;
+    margin: 0;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .prev-intro {
+    max-width: 580px;
+    margin: 2.5rem auto;
+    padding: 0 1.5rem;
+    text-align: center;
+  }
+
+  .prev-intro p {
+    color: #3a3a38;
+    font-size: 0.95rem;
+    line-height: 1.8;
+    margin: 0;
+  }
+
+  .prev-sections {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .prev-card {
+    background: #4a5c3a;
+    border-radius: 14px;
+    padding: 1.8rem 2rem;
+    margin-bottom: 0.5rem;
+    border: 1px solid rgba(245, 240, 232, 0.16);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  }
+
+  .prev-card-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 0.8rem;
+  }
+
+  .prev-card-header i {
+    font-size: 22px;
+    color: #e8826a;
+  }
+
+  .prev-card h2 {
+    font-size: 1.3rem;
+    color: #e8826a;
+    margin: 0;
+    font-weight: 600;
+  }
+
+  .prev-card p {
+    color: #c8d4b8;
+    font-size: 0.88rem;
+    line-height: 1.7;
+    margin: 0 0 1rem;
+  }
+
+  .prev-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .prev-tag {
+    background: rgba(245, 240, 232, 0.12);
+    border: 1px solid rgba(245, 240, 232, 0.2);
+    border-radius: 20px;
+    padding: 4px 12px;
+    font-size: 0.78rem;
+    color: #f5f0e8;
+    font-family: 'Lato', sans-serif;
+  }
+
+  .prev-divider {
+    height: 1px;
+    background: rgba(245, 240, 232, 0.15);
+    margin: 1rem 0;
+  }
+</style>
+
+<div class="preview-wrap">
+  <div class="prev-hero">
+    <h1>O Nosso Cardápio</h1>
+    <p>Do café ao copo — tudo feito com intenção</p>
+  </div>
+
+  <div class="prev-intro">
+    <p>No CoffeAll, a cozinha é uma extensão do nosso espaço. Ingredientes frescos, receitas pensadas e uma pitada de alma lisboeta em cada prato e bebida.</p>
+  </div>
+
+  <div class="prev-sections">
+
+    <div class="prev-card">
+      <div class="prev-card-header">
+        <i class="ti ti-coffee" aria-hidden="true"></i>
+        <h2>Cafés & Infusões</h2>
+      </div>
+      <p>Do espresso clássico ao flat white cremoso. Chás de autor, infusões de ervas e o nosso café de filtro de torra especial — para quem aprecia cada gole.</p>
+      <div class="prev-tags">
+        <span class="prev-tag">Espresso</span>
+        <span class="prev-tag">Cappuccino</span>
+        <span class="prev-tag">Flat White</span>
+        <span class="prev-tag">Cold Brew</span>
+        <span class="prev-tag">Chá de ervas</span>
+      </div>
+    </div>
+
+    <div class="prev-card">
+      <div class="prev-card-header">
+        <i class="ti ti-glass" aria-hidden="true"></i>
+        <h2>Bebidas Frias</h2>
+      </div>
+      <p>Sumos naturais, limonadas artesanais, smoothies e as nossas misturas exclusivas. Refrescantes e cheias de sabor para qualquer hora do dia.</p>
+      <div class="prev-tags">
+        <span class="prev-tag">Limonada da casa</span>
+        <span class="prev-tag">Smoothie verde</span>
+        <span class="prev-tag">Sumo natural</span>
+        <span class="prev-tag">Iced latte</span>
+      </div>
+    </div>
+
+    <div class="prev-card">
+      <div class="prev-card-header">
+        <i class="ti ti-bottle" aria-hidden="true"></i>
+        <h2>Bebidas Alcoólicas</h2>
+      </div>
+      <p>Cervejas artesanais, vinhos naturais e os nossos cocktails da casa — pensados para prolongar a noite sem pressa. Porque o CoffeAll não fecha quando o sol se põe.</p>
+      <div class="prev-tags">
+        <span class="prev-tag">Cerveja artesanal</span>
+        <span class="prev-tag">Vinho natural</span>
+        <span class="prev-tag">Gin tónico</span>
+        <span class="prev-tag">Cocktail da casa</span>
+        <span class="prev-tag">Aperol Spritz</span>
+      </div>
+    </div>
+
+    <div class="prev-card">
+      <div class="prev-card-header">
+        <i class="ti ti-tools-kitchen-2" aria-hidden="true"></i>
+        <h2>Da Cozinha</h2>
+      </div>
+      <p>Tostas generosas, saladas frescas, bolos caseiros e pratos do dia. Comida honesta, feita na hora, com produtos locais sempre que possível.</p>
+      <div class="prev-tags">
+        <span class="prev-tag">Tosta mista</span>
+        <span class="prev-tag">Bolo do dia</span>
+        <span class="prev-tag">Salada fresca</span>
+        <span class="prev-tag">Prato do dia</span>
+        <span class="prev-tag">Croissant</span>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+    <p>CoffeAll © 2026 | Rua da Bica de Duarte Belo, 42, Lisboa | contact@coffeall.com | @coffeall.lisboa</p>
+</footer>
+
+<script>
+function setStars(n) {
+  document.querySelectorAll('#stars span').forEach((s, i) => {
+    s.classList.toggle('active', i < n);
+  });
+}
+</script>
+
+</body>
+</html>

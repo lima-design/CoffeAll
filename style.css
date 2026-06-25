@@ -1,0 +1,358 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f5f0e0;
+    color: #1a1a1a;
+}
+
+/* HEADER */
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 999;
+    background-color: rgba(74,92,58,0.95);
+    padding: 20px 40px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #e8826a;
+    letter-spacing: 2px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #f5f0e8;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+nav ul li a:hover {
+    color: #4a5c3a;
+}
+
+/* HERO */
+.hero {
+    height: 100vh;
+    background-image: url('../imagens/hero.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 80px;
+    color: #f5f0e8;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+}
+
+.hero-content p {
+    font-size: 20px;
+    color: #f5f0e8;
+    letter-spacing: 3px;
+    margin-top: 15px;
+}
+
+/* ESPAÇO */
+.espaco {
+    display: flex;
+    align-items: center;
+    padding: 80px 40px;
+    gap: 60px;
+}
+
+.espaco-imagem {
+    width: 50%;
+}
+
+.espaco-imagem img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.espaco-texto {
+    width: 50%;
+    text-align: center;
+}
+
+.espaco-texto h2 {
+    font-size: 32px;
+    color: #e8826a;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.espaco-texto h3 {
+    font-size: 16px;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+    color: #1a1a1a;
+}
+
+.espaco-texto p {
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    color: #1a1a1a;
+}
+
+/* CONTACTOS */
+.contactos {
+    display: flex;
+    margin: 60px 40px;
+    border-radius: 30px;
+    overflow: hidden;
+    min-height: 500px;
+}
+
+.contactos-info {
+    width: 50%;
+    background-color: #4a5c3a;
+    color: #f5f0e8;
+    padding: 60px 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 30px 0 0 30px;
+}
+
+.contactos-info h2 {
+    font-size: 28px;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+
+.contactos-info p {
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.contactos-mapa {
+    width: 50%;
+    border-radius: 0 30px 30px 0;
+    overflow: hidden;
+}
+
+.contactos-mapa iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+}
+
+/* FOOTER */
+footer {
+    background-color: #4a5c3a;
+    color: #fff8ec;
+    text-align: center;
+    padding: 20px;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+:root{
+  --bg: #f4ebd7;
+  --top: #4f5d36;
+  --card: #566739;
+  --card-accent: #4c5d33;
+  --text: #f3e6cf;
+  --muted: #e7d9b9;
+  --line: rgba(255,255,255,.18);
+  --btn: #e57e68;
+  --btn-text: #fff6ef;
+}
+
+/* reset */
+*{box-sizing:border-box}
+html,body{margin:0;height:100%}
+
+body{
+  background:var(--bg);
+  font-family: 'Poppins', sans-serif;
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+/* topbar */
+.topbar{
+  background:var(--top);
+  height:50px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  position:relative;
+  z-index:10;
+}
+
+.topbar-inner{ text-align:center }
+.topbar h1{
+  margin:0;
+  font-family: 'Cinzel', Georgia, serif;
+  font-size:13px;    /* menor que antes */
+  font-weight:600;
+  color:#f2ead8;
+  letter-spacing:0.6px;
+}
+.topbar p{
+  margin:2px 0 0;
+  font-size:8px;
+  color:var(--muted);
+  text-transform:uppercase;
+  letter-spacing:2px;
+}
+
+/* page layout */
+.page{
+  min-height:calc(100vh - 50px);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:18px;
+  padding:26px 16px 60px; /* padding-top maior para não ficar cortado */
+}
+
+/* card */
+.card{
+  width:320px;           /* card um pouco maior que a tua versão estreita */
+  background:var(--card);
+  border-radius:8px;
+  padding:12px;          /* reduzido para aproximar título do conteúdo */
+  box-shadow:0 0 0 1px rgba(0,0,0,.03);
+  color:var(--text);
+}
+
+/* título do cartão (ajustado) */
+.card h2{
+  margin:0 0 6px;        /* menos espaço abaixo do título */
+  font-family:'Cinzel', Georgia, serif;
+  font-size:13px;        /* reduzido para ficar pequeno como na imagem */
+  font-weight:600;
+  color:#f0c8a7;
+}
+
+/* subtítulo/descrição pequeno */
+.card > p{
+  margin:0 0 10px;
+  font-size:10px;
+  color:#efe0c0;
+  line-height:1.2;
+}
+
+/* formulário */
+.contact-form{ display:flex; flex-direction:column; gap:8px }
+.row{ display:flex; gap:8px }
+.field{ display:flex; flex-direction:column; gap:4px; flex:1 }
+
+label{
+  font-size:8px;
+  color:#efe3cd;
+  text-transform:uppercase;
+  letter-spacing:0.8px;
+  margin-bottom:2px;
+}
+
+input, textarea{
+  background:rgba(255,255,255,0.04);
+  border:1px solid var(--line);
+  color:#fff7ea;
+  padding:8px 9px;
+  font-size:12px;
+  border-radius:3px;
+  outline:none;
+}
+
+input::placeholder, textarea::placeholder{
+  color:rgba(255,247,234,0.55);
+}
+
+textarea{ min-height:72px }
+
+/* estrelas e pequenas notas */
+.stars{ display:flex; gap:6px; color:#d9c99d; font-size:16px }
+
+/* botão */
+button{
+  margin-top:4px;
+  height:36px;
+  border:0;
+  border-radius:4px;
+  background:var(--btn);
+  color:var(--btn-text);
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:1px;
+  cursor:pointer;
+}
+/* responsivo: centra e reduz margens em telas pequenas */
+@media (max-width:420px){
+  .card{ width:92% }
+  .row{ flex-direction:column }
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    color: #e8826a;
+}
+.cafe-page {
+    padding-top: 80px;
+}
+
+.logo a {
+    text-decoration: none;
+    color: #e8826a;
+}
+
+p {
+    color: #fffff3;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.cardapio-page {
+    padding-top: 80px;
+}
+
+.form-card #form-contacto .field-row {
+  display: flex !important;
+  flex-direction: row !important;
+  gap: 1rem !important;
+  width: 100% !important;
+}
+
+.form-card #form-contacto .field-row .field {
+  flex: 1 1 0 !important;
+  min-width: 0 !important;
+}
+
+.form-card #form-contacto .field-row .field input,
+.form-card #form-contacto .field-row .field select {
+  width: 100% !important;
+  min-width: 0 !important;
+  display: block;
+}

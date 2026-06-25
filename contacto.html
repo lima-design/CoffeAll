@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CoffeAll - Contactos</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+     
+      .cafe-page {
+        background: #f5f0e0;
+        font-family: 'Lato', sans-serif;
+        min-height: 100vh;
+        padding: 80px 0 4rem;
+        color: #2c2c2a;
+      }
+
+      .cafe-hero {
+        background: #4a5c3a;
+        padding: 3rem 2rem 2.5rem;
+        text-align: center;
+      }
+
+      .cafe-hero h1 {
+        font-family: 'Playfair Display', serif;
+        color: #f5f0e8;
+        font-size: 2.2rem;
+        font-weight: 600;
+        margin: 0 0 0.4rem;
+        letter-spacing: 0.02em;
+      }
+
+      .cafe-hero p {
+        color: #c8d4b8;
+        font-size: 0.95rem;
+        font-weight: 300;
+        margin: 0;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+      }
+
+     .forms-wrapper {
+    max-width: 1000px;
+    margin: 2.5rem auto 0;
+    padding: 0 1.5rem;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+.form-card {
+    flex: 1;
+}
+
+      .form-card {
+        background: #4a5c3a;
+        border-radius: 14px;
+        padding: 2.2rem 2.4rem;
+      }
+
+      .form-card h2 {
+        font-family: 'Playfair Display', serif;
+        color: #e8826a;
+        font-size: 1.55rem;
+        font-weight: 600;
+        margin: 0 0 0.4rem;
+      }
+
+      .form-card .subtitle {
+        color: #c8d4b8;
+        font-size: 0.88rem;
+        font-weight: 300;
+        margin: 0 0 1.8rem;
+        letter-spacing: 0.03em;
+      }
+
+      .field-row {
+         display: flex;
+         gap: 1rem;
+        }
+
+       .field-row .field {
+       flex: 1;
+      }
+
+      .field {
+        display: flex;
+        flex-direction: column;
+        gap: 0.4rem;
+        margin-bottom: 1.1rem;
+      }
+
+      .field label {
+        font-size: 0.78rem;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: #c8d4b8;
+      }
+
+      .field input,
+      .field textarea,
+      .field select {
+        background: rgba(245, 240, 224, 0.1);
+        border: 1px solid rgba(245, 240, 232, 0.25);
+        border-radius: 7px;
+        padding: 0.65rem 0.9rem;
+        color: #f5f0e8;
+        font-family: 'Lato', sans-serif;
+        font-size: 0.92rem;
+        font-weight: 300;
+        outline: none;
+        transition: border-color 0.2s, background 0.2s;
+        width: 100%;
+        box-sizing: border-box;
+        -webkit-appearance: none;
+        appearance: none;
+      }
+
+      .field input::placeholder,
+      .field textarea::placeholder {
+        color: rgba(245, 240, 232, 0.35);
+      }
+
+      .field input:focus,
+      .field textarea:focus,
+      .field select:focus {
+        border-color: #e8826a;
+        background: rgba(245, 240, 224, 0.15);
+      }
+
+      .field select option {
+        background: #4a5c3a;
+        color: #f5f0e8;
+      }
+
+      .field textarea {
+        resize: vertical;
+        min-height: 110px;
+      }
+
+      .divider {
+        height: 1px;
+        background: rgba(245, 240, 232, 0.15);
+        margin: 1.4rem 0;
+      }
+
+      .stars {
+        display: flex;
+        gap: 6px;
+        margin-bottom: 1.1rem;
+      }
+
+      .stars span {
+        font-size: 1.6rem;
+        cursor: pointer;
+        color: rgba(245, 240, 232, 0.25);
+        transition: color 0.15s;
+        line-height: 1;
+        user-select: none;
+      }
+
+      .stars span.active { color: #e8826a; }
+
+      .submit-btn {
+        width: 100%;
+        padding: 0.85rem;
+        background: #e8826a;
+        color: #fff;
+        border: none;
+        border-radius: 7px;
+        font-family: 'Lato', sans-serif;
+        font-size: 0.85rem;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: background 0.2s, transform 0.15s;
+        margin-top: 0.5rem;
+      }
+
+      .submit-btn:hover { background: #d4735a; transform: translateY(-1px); }
+      .submit-btn:active { transform: translateY(0); }
+
+      .success-msg {
+        display: none;
+        text-align: center;
+        padding: 2rem 1rem;
+        color: #f5f0e8;
+      }
+
+      .success-msg h3 {
+        font-family: 'Playfair Display', serif;
+        font-size: 1.3rem;
+        margin: 0.8rem 0 0.4rem;
+        color: #f5f0e8;
+      }
+      .success-msg p {
+         color: #c8d4b8; font-weight: 300; 
+         font-size: 0.9rem;
+         margin: 0; 
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <nav>
+        <div class="logo"><a href="index.html">CoffeAll</a></div>
+        <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="cardapio.html">Cardápio</a></li>
+            <li><a href="contacto.html">Fale Connosco</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="cafe-page">
+  <div class="cafe-hero">
+    <h1>Contactos</h1>
+    <p>Estamos sempre prontos para o receber</p>
+  </div>
+
+  <div class="forms-wrapper">
+
+    <div class="form-card">
+      <h2>Trabalhe connosco</h2>
+      <p class="subtitle">Valorizamos pessoas apaixonadas por café e por gente.</p>
+      <div id="form-trabalho">
+        <div class="field-row">
+          <div class="field">
+            <label>Nome</label>
+            <input type="text" placeholder="O seu nome" />
+          </div>
+          <div class="field">
+            <label>Apelido</label>
+            <input type="text" placeholder="O seu apelido" />
+          </div>
+        </div>
+        <div class="field">
+          <label>Email</label>
+          <input type="email" placeholder="email@exemplo.com" />
+        </div>
+        <div class="field">
+          <label>Contacto telefónico</label>
+          <input type="tel" placeholder="+351 9xx xxx xxx" />
+        </div>
+        <div class="divider"></div>
+        <div class="field">
+          <label>Área de interesse</label>
+          <select>
+            <option value="" disabled selected>Qual a sua área?</option>
+            <option>Barista</option>
+            <option>Atendimento / sala</option>
+            <option>Pastelaria e cozinha</option>
+            <option>Gestão e coordenação</option>
+            <option>Outra</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Disponibilidade</label>
+          <select>
+            <option value="" disabled selected>Quando pode começar?</option>
+            <option>Imediata</option>
+            <option>Dentro de 2 semanas</option>
+            <option>Dentro de 1 mês</option>
+            <option>A combinar</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Sobre si</label>
+          <textarea placeholder="Fale um pouco sobre a sua experiência e motivação..."></textarea>
+        </div>
+        <button class="submit-btn" onclick="document.getElementById('form-trabalho').style.display='none'; document.getElementById('success-trabalho').style.display='block';">Enviar candidatura</button>
+      </div>
+      <div class="success-msg" id="success-trabalho">
+        <h3>Candidatura recebida!</h3>
+        <p>Analisaremos o seu perfil e entraremos em contacto. Obrigado pelo interesse!</p>
+      </div>
+    </div>
+
+    <div class="form-card">
+      <h2>Fale connosco</h2>
+      <p class="subtitle">A sua opinião ajuda-nos a melhorar. Partilhe a sua experiência.</p>
+      <div id="form-contacto">
+        <div class="field-row">
+          <div class="field">
+            <label>Nome</label>
+            <input type="text" placeholder="O seu nome" />
+          </div>
+          <div class="field">
+            <label>Email</label>
+            <input type="email" placeholder="email@exemplo.com" />
+          </div>
+        </div>
+        <div class="field">
+          <label>Assunto</label>
+          <select>
+            <option value="" disabled selected>Tipo de mensagem</option>
+            <option>Feedback / opinião</option>
+            <option>Sugestão</option>
+            <option>Reclamação</option>
+            <option>Elogio</option>
+            <option>Outro</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Avaliação geral</label>
+          <div class="stars" id="stars">
+            <span onclick="setStars(1)">★</span>
+            <span onclick="setStars(2)">★</span>
+            <span onclick="setStars(3)">★</span>
+            <span onclick="setStars(4)">★</span>
+            <span onclick="setStars(5)">★</span>
+          </div>
+        </div>
+        <div class="field">
+          <label>Mensagem</label>
+          <textarea placeholder="Partilhe a sua experiência ou deixe uma sugestão..."></textarea>
+        </div>
+        <button class="submit-btn" onclick="document.getElementById('form-contacto').style.display='none'; document.getElementById('success-contacto').style.display='block';">Enviar mensagem</button>
+      </div>
+      <div class="success-msg" id="success-contacto">
+        <h3>Mensagem enviada!</h3>
+        <p>Obrigado pelo seu feedback. Até breve!</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+    <p>CoffeAll © 2026 | Rua da Bica de Duarte Belo, 42, Lisboa | contact@coffeall.com | @coffeall.lisboa</p>
+</footer>
+
+<script>
+function setStars(n) {
+  document.querySelectorAll('#stars span').forEach((s, i) => {
+    s.classList.toggle('active', i < n);
+  });
+}
+</script>
+
+</body>
+</html>
