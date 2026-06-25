@@ -356,3 +356,20 @@ p {
   min-width: 0 !important;
   display: block;
 }
+
+@media (max-width: 768px) {
+    .contactos {
+        flex-direction: column;
+    }
+
+    .contactos-info {
+        width: 100%;
+        border-radius: 30px 30px 0 0;
+    }
+
+    .contactos-mapa {
+        width: 100%;
+        height: 300px;
+        border-radius: 0 0 30px 30px;
+    }
+}
